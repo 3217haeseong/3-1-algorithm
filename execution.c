@@ -166,7 +166,7 @@ int main()
 
     printf("quick sort : %lf  %lf   %lf   %lf   %lf\n",time,time2,time3,time4,time5);
 
-    for(i=0;i<5;i++){
+    for(i=0;i<5;i++){             
         
         make_arr(&a[0],100);
         ran_num(a[0].h_arr,100);
