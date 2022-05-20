@@ -209,4 +209,7 @@ int main()  // test-case에 대해 실행
     print_graph(result_graph2);
     print_edge(result_graph3);
 
+    free(test_graph3);
+    free(result_graph3);
+
 }
