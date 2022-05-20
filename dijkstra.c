@@ -152,11 +152,10 @@ void dijkstra(int n, array_graph* graph, array_graph* result_graph)  // 다익�
 
 int main()  // test-case에 대해 실행
 {
-	int value;
-    array_graph* test_graph1=create_arraygraph(5,0);
-	array_graph* result_graph=create_arraygraph(5,0);
+    array_graph* test_graph1=create_arraygraph(5,0);                       //첫 번째 test-case 그래프 생성 
+	array_graph* result_graph=create_arraygraph(5,0);                      //dijkstra 알고리즘 후 결과를 담을 그래프 생성
 
-    add_edge(test_graph1,0,1,7);
+    add_edge(test_graph1,0,1,7);                                            // 그래프의 간선들 추가
     add_edge(test_graph1,0,2,4);
     add_edge(test_graph1,0,3,6);
     add_edge(test_graph1,0,4,1);
@@ -165,14 +164,14 @@ int main()  // test-case에 대해 실행
     add_edge(test_graph1,3,1,3);
     add_edge(test_graph1,4,3,1);
 
-	dijkstra(5,test_graph1,result_graph);
+	dijkstra(5,test_graph1,result_graph);                               // dijkstra 알고리즘으로 사용
 
-    print_graph(result_graph);
-    print_edge(result_graph);
-    free(test_graph1);
-    free(result_graph);
+    print_graph(result_graph);                                  // dijkstra 알고리즘 사용 후 결과 그래프를 행렬로 출력
+    print_edge(result_graph);                                   // dijkstra 알고리즘 사용 후 결과 그래프의 간선들을 출력
+    free(test_graph1);                                          // test-case 그래프 메모리 해제
+    free(result_graph);                                         // 결과 그래프 메모리 해제
 
-    array_graph* test_graph2=create_arraygraph(6,1);
+    array_graph* test_graph2=create_arraygraph(6,1);            // 이후는 첫 번째 test-case와 마찬가지로 두 번째, 세번째 test-case로 진행.
     array_graph* result_graph2=create_arraygraph(6,1);
 
     add_edge(test_graph2,0,1,5);
